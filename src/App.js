@@ -3,7 +3,7 @@ import './App.css';
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
-
+import ResumeForm from "./components/ResumeForm"
 import {
   Button,
   Container,
@@ -43,7 +43,7 @@ function App() {
         <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
         <Button outline theme="info">Get Started</Button>
         </div>
-        
+        <ResumeForm></ResumeForm>
       </Container>
     </div>
   );
