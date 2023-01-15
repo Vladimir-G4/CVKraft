@@ -42,6 +42,12 @@ function App() {
         <div id="starter">
         <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
         <Button outline theme="info">Get Started</Button>
+        <script>{
+        setTimeout(() => {document.getElementById("starter").addEventListener("click", function(){
+                            document.getElementById("starter").classList.add("hidden");
+                            })
+                          }, 200)}
+        </script>
         </div>
         <ResumeForm></ResumeForm>
       </Container>
