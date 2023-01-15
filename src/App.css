@@ -1,10 +1,12 @@
+*{
+  color:#6cd4cb !important;
+}
 body{
   font-family: Kanit !important;
 }
 #quiz{
   height:90.9vh;
   background-color: #040f0b;
-  color:#6cd4cb;
 }
 .navbar-brand{
   font-size:200% !important;

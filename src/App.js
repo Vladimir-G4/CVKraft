@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
+import { ReactDOM } from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import ResumeForm from "./components/ResumeForm"
+import { TypeAnimation } from 'react-type-animation';
+
 import {
   Button,
   Container,
@@ -41,15 +44,17 @@ function App() {
       <Container id="quiz" fluid={true}>
         <div id="starter">
         <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
-        <Button outline theme="info">Get Started</Button>
-        <script>{
-        setTimeout(() => {document.getElementById("starter").addEventListener("click", function(){
-                            document.getElementById("starter").classList.add("hidden");
-                            })
-                          }, 200)}
+        <Button id="start-btn" outline theme="info">Get Started</Button>
+        <script>
+          
         </script>
         </div>
-        <ResumeForm></ResumeForm>
+        <TypeAnimation
+    sequence={['What is your name?', 1000]}
+    speed={75} 
+    wrapper="h1"
+  />
+        <ResumeForm/>
       </Container>
     </div>
   );
