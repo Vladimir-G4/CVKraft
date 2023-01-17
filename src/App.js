@@ -24,37 +24,30 @@ import {
   InputGroupAddon,
   InputGroupText,
   FormInput,
-  Collapse
+  Collapse,
 } from "shards-react";
 
 function App() {
   return (
     <div className="App">
-      <Navbar type="dark" theme="dark" expand="md">
-        <NavbarBrand>CVK</NavbarBrand>
-       <Nav navbar>
-       <NavItem>
-          <NavLink active href="/">Resume Builder</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink active href="/Privacy">Privacy</NavLink>
-        </NavItem>
-       </Nav>
-      </Navbar>
       <Container id="quiz" fluid={true}>
         <div id="starter">
-        <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
-        <Button id="start-btn" outline theme="info">Get Started</Button>
-        <script>
-          
-        </script>
+          <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
+          <Button id="start-btn" outline theme="info">Get Started</Button>
+          <script>
+
+          </script>
         </div>
         <TypeAnimation
-    sequence={['What is your name?', 1000]}
-    speed={75} 
-    wrapper="h1"
-  />
-        <ResumeForm/>
+          sequence={['What is your name?', 1000]}
+          speed={75}
+          wrapper="h1"
+        />
+        <InputGroup>
+          <FormInput/>
+          <Button id="start-btn" outline theme="info" required>Next</Button>
+        </InputGroup>
+        
       </Container>
     </div>
   );

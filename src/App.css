@@ -1,11 +1,12 @@
 *{
   color:#6cd4cb !important;
-}
-body{
   font-family: Kanit !important;
 }
+body{
+
+}
 #quiz{
-  height:90.9vh;
+  height:100vh;
   background-color: #040f0b;
 }
 .navbar-brand{
@@ -33,3 +34,6 @@ body{
   transition: visibility 0s 2s, opacity 2s linear;
 }
 
+.form-control{
+  color:black !important;
+}
