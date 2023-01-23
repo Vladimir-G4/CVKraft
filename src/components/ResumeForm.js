@@ -20,6 +20,7 @@ import {
     Collapse,
   } from "shards-react";
   import { TypeAnimation } from 'react-type-animation';
+  import { CSSTransition } from 'react-transition-group';
 
 
 const ResumeForm = () => {
@@ -38,14 +39,24 @@ const ResumeForm = () => {
     console.log(answer);
    }
    return(
-    <>
+    <section className="questionBox">
+    <CSSTransition
+          in={true}
+          timeout={2000}
+          classNames="fade"
+          unmountOnExit
+        >
     <h1>{questions[currentQuestion].question}</h1>
+    </CSSTransition>
         <InputGroup>
-          <FormInput id='form-input' required/>
+          <FormInput id='form-input' placeholder={questions[currentQuestion].placeholder} required/>
+
           <Button id="start-btn" onClick={handleAnswer} outline theme="info">Next</Button>
         </InputGroup>
-    </>
+    </section>
    )
 }
+
+
 
 export default ResumeForm;

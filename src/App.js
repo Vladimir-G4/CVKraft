@@ -33,7 +33,7 @@ function App() {
       <Container id="quiz" fluid={true}>
         <div id="starter">
           <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
-          <Button id="start-btn" outline theme="info">Get Started</Button>
+          <Button id="start-btn" outline theme="info" type="submit">Get Started</Button>
           <script>
 
           </script>

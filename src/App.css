@@ -2,9 +2,7 @@
   color:#6cd4cb !important;
   font-family: Kanit !important;
 }
-body{
 
-}
 #quiz{
   height:100vh;
   background-color: #040f0b;
@@ -34,6 +32,30 @@ body{
   transition: visibility 0s 2s, opacity 2s linear;
 }
 
+.questionBox{
+  margin:auto;
+  width: 75%;
+
+}
+
 .form-control{
   color:black !important;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 2000ms;
 }
