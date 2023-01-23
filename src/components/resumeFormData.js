@@ -10,3 +10,5 @@ export const prompts = [
     {id: 8, question : "Leadership Experience", subQuestions: false, multiInput: false, skippable: true},
     {id: 9, question : "Relevant Links/Social Media", subQuestions: false, multiInput: false, skippable: true},
 ];
+
+export const answers = [];

@@ -38,15 +38,7 @@ function App() {
 
           </script>
         </div>
-        <TypeAnimation
-          sequence={['What is your name?', 1000]}
-          speed={75}
-          wrapper="h1"
-        />
-        <InputGroup>
-          <FormInput/>
-          <Button id="start-btn" outline theme="info" required>Next</Button>
-        </InputGroup>
+        <ResumeForm/>
         
       </Container>
     </div>
