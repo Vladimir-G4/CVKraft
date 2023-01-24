@@ -37,6 +37,7 @@ const ResumeForm = () => {
     setCurrentQuestion(currentQuestion + 1);
     console.log(currentQuestion + ` ${questions[currentQuestion].question}`);
     console.log(answer);
+    document.getElementById('form-input').value = '';
    }
    return(
     <section className="questionBox">
