@@ -3,6 +3,15 @@
   font-family: Kanit !important;
 }
 
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+  color: white;
+  text-align: center;
+}
 #quiz{
   height:100vh;
   background-color: #040f0b;
@@ -10,7 +19,6 @@
 .navbar-brand{
   font-size:200% !important;
 }
-
 
 #starter{
   margin:auto;
@@ -35,7 +43,11 @@
 .questionBox{
   margin:auto;
   width: 75%;
-
+  height:inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
 }
 
 .form-control{

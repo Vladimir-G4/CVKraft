@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { ReactDOM } from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
@@ -28,6 +28,24 @@ import {
 } from "shards-react";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  const handleStart = () => {
+    const starter = document.getElementById('starter');
+    starter.style.transition = 'opacity 2s';
+    starter.style.opacity = 0;
+    setTimeout(() => {
+      starter.remove();
+      setShowForm(true);
+    }, 2000);
+  };
+  useEffect(() => {
+    const startBtn = document.getElementById('start-btn');
+    startBtn.addEventListener('click', handleStart);
+    return () => {
+      startBtn.removeEventListener('click', handleStart);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Container id="quiz" fluid={true}>
@@ -38,9 +56,12 @@ function App() {
 
           </script>
         </div>
-        <ResumeForm/>
+        {showForm && <ResumeForm/>}
         
       </Container>
+      <footer>
+      <a href="https://github.com/Vladimir-G4/CVKraft">Follow this project on Github!</a>
+      </footer>
     </div>
   );
 }
