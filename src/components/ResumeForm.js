@@ -36,7 +36,7 @@ const ResumeForm = () => {
     answers.push(answer);
     setCurrentQuestion(currentQuestion + 1);
     console.log(currentQuestion + ` ${questions[currentQuestion].question}`);
-    console.log(answer);
+    console.log(answers);
     document.getElementById('form-input').value = '';
    }
    return(
@@ -50,11 +50,12 @@ const ResumeForm = () => {
     <h1>{questions[currentQuestion].question}</h1>
     </CSSTransition>
         <InputGroup>
-          <FormInput id='form-input' placeholder={questions[currentQuestion].placeholder} required/>
-
+          <FormInput id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
           <Button id="start-btn" onClick={handleAnswer} outline theme="info">Next</Button>
         </InputGroup>
+        {questions[currentQuestion].subQuestions && <h1>(insert subquestions)</h1>}
     </section>
+    
    )
 }
 
