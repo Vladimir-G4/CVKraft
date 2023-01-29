@@ -50,7 +50,7 @@ const ResumeForm = () => {
     <h1>{questions[currentQuestion].question}</h1>
     </CSSTransition>
         <InputGroup>
-          <FormInput id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
+          <FormInput autocomplete="off" id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
           <Button id="start-btn" onClick={handleAnswer} outline theme="info">Next</Button>
         </InputGroup>
         {questions[currentQuestion].subQuestions && <h1>(insert subquestions)</h1>}
