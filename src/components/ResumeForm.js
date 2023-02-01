@@ -21,6 +21,7 @@ import {
   } from "react-bootstrap";
   import { TypeAnimation } from 'react-type-animation';
   import { CSSTransition } from 'react-transition-group';
+import SubQ from "./SubQ";
 
 
 const ResumeForm = () => {
@@ -51,9 +52,9 @@ const ResumeForm = () => {
     </CSSTransition>
         <InputGroup>
           <Form.Control autocomplete="off" id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
-          <Button id="start-btn" onClick={handleAnswer} outline theme="info">Next</Button>
+          <Button id="start-btn" onClick={handleAnswer} variant="outline-primary" theme="info">Next</Button>
         </InputGroup>
-        {questions[currentQuestion].subQuestions && <h1>(insert subquestions)</h1>}
+        <>{questions[currentQuestion].subQuestions && <SubQ questions={questions[currentQuestion].subQuestions}/>}</>
     </section>
     
    )
