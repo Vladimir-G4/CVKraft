@@ -16,9 +16,9 @@ import {
     InputGroup,
     InputGroupAddon,
     InputGroupText,
-    FormInput,
+    Form,
     Collapse,
-  } from "shards-react";
+  } from "react-bootstrap";
   import { TypeAnimation } from 'react-type-animation';
   import { CSSTransition } from 'react-transition-group';
 
@@ -50,7 +50,7 @@ const ResumeForm = () => {
     <h1>{questions[currentQuestion].question}</h1>
     </CSSTransition>
         <InputGroup>
-          <FormInput autocomplete="off" id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
+          <Form.Control autocomplete="off" id='form-input' placeholder={questions[currentQuestion].placeholder} type={questions[currentQuestion].type} required/>
           <Button id="start-btn" onClick={handleAnswer} outline theme="info">Next</Button>
         </InputGroup>
         {questions[currentQuestion].subQuestions && <h1>(insert subquestions)</h1>}

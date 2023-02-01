@@ -2,8 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect} from "react";
 import { ReactDOM } from 'react-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css"
 import ResumeForm from "./components/ResumeForm"
 import { TypeAnimation } from 'react-type-animation';
 
@@ -23,9 +21,9 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
-  FormInput,
+  Form,
   Collapse,
-} from "shards-react";
+} from "react-bootstrap";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -51,7 +49,7 @@ function App() {
       <Container id="quiz" fluid={true}>
         <div id="starter">
           <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
-          <Button id="start-btn" outline theme="info" type="submit">Get Started</Button>
+          <Button id="start-btn" variant="outline-primary" theme="info" type="submit">Get Started</Button>
           <script>
 
           </script>
