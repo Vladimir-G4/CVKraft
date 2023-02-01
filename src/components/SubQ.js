@@ -33,9 +33,15 @@ class SubQ extends React.Component{
     }
 
     render() {
+        const values = this.state.questions;
     return(
         <>
-        <h1>{this.state.questions[0]}</h1>
+        {values.map((value, index) => (
+        <>
+        <h3>{values[index]}</h3>
+        <Form.Control key={index} placeholder={values[index]} />
+        </>
+      ))}
         </>
     );
     }

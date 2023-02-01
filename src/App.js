@@ -50,9 +50,6 @@ function App() {
         <div id="starter">
           <img src="static/images/CVKraft.jpg" id="cvk-logo" alt="CVKraft Logo"></img>
           <Button id="start-btn" variant="outline-primary" theme="info" type="submit">Get Started</Button>
-          <script>
-
-          </script>
         </div>
         {showForm && <ResumeForm/>}
         

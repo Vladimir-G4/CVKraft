@@ -16,6 +16,10 @@ footer{
 #quiz{
   height:100vh;
   background-color: #040f0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .navbar-brand{
   font-size:200% !important;
@@ -35,6 +39,12 @@ footer{
   width: 100%;
 }
 
+#input-block{
+  flex-direction: column;
+}
+#input-block input{
+  width:100%;
+}
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -46,7 +56,7 @@ footer{
   width: 75%;
   height:inherit;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   gap:20px;
 }
