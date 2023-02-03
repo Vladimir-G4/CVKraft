@@ -39,7 +39,7 @@ class SubQ extends React.Component{
         {values.map((value, index) => (
         <>
         <h3>{values[index]}</h3>
-        <Form.Control key={index} placeholder={values[index]} />
+        <Form.Control key={index} placeholder={values[index]} id={`form-input-${index+1}`} />
         </>
       ))}
         </>
